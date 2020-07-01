@@ -19,14 +19,14 @@ D    	3	    $
 E	    4	    %
 
 4.En la hoja principal establecer la validación principal de datos desde la fila 2 de la columna deseada,
-seleccionando el como rango la fila de encabezados de la hoja con la tabla de validación
+seleccionando como rango de validación la fila de encabezados de la hoja que contiene la tabla de validación
 
 5.Configurar variables principales en el script
 */
 
 function onEdit(){
   //config
-  var mainDataSheetName = "Datos";            //Nombre con los datos principales
+  var mainDataSheetName = "Datos";            //Nombre de la hoja con los datos principales
   var validationDataSheetName = "Validacion"; //Nombre de la hoja con tabla de validacion
   var firstValidationColumn = 3;              //Número de columna de la validación principal
   var secondValidationColumnOffset = 3;       //Número de columna para la validación secundaria
@@ -61,7 +61,7 @@ function onEdit(){
       var validationRange = validationDataSheet.getRange(2, index, validationDataSheet.getLastRow());
       
       //construye la regla de validación secundaria
-      var validationRule = SpreadsheetApp.newDataValidation().requireValueInRange(validationRange).setAllowInvalid(false).build();
+      var validationRule = SpreadsheetApp.newDataValidation().requireValueInRange(validationRange).setAllowInvalid(allowInvalid).build();
       
       //aplica la regla de validación en la celda correspondiente en la columna de validación secundaria
       activeCell.offset(0, secondValidationColumnOffset).setDataValidation(validationRule);
