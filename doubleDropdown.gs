@@ -29,7 +29,7 @@ function onEdit(){
   var mainDataSheetName = "Datos";            //Nombre de la hoja con los datos principales
   var validationDataSheetName = "Validacion"; //Nombre de la hoja con tabla de validacion
   var firstValidationColumn = 3;              //Número de columna de la validación principal
-  var secondValidationColumnOffset = 3;       //Número de columna para la validación secundaria
+  var secondValidationColumnOffset = 3;       //Desplazamiento de columna para la validación secundaria
   var allowInvalid = false;                   //¿Permitir que se escriban datos fuera del rango de validación? true/false
   //end config
   
