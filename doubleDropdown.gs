@@ -12,11 +12,11 @@ b.Crear la tabla principal de validación, colocando como encabezado los campos 
 c.En cada columna anotar los datos aplicables que debe desplegar el validación secundaria 
 ejemplo
 Letras	Numeros	Simbolos
-A	    0	    !
-B	    1	    -
-C	    2	    *
-D    	3	    $
-E	    4	    %
+A       0       !
+B       1       -
+C       2       *
+D       3       $
+E       4       %
 
 4.En la hoja principal establecer la validación principal de datos desde la fila 2 de la columna deseada,
 seleccionando como rango de validación la fila de encabezados de la hoja que contiene la tabla de validación
@@ -57,13 +57,13 @@ function onEdit(){
     //comprueba si el índice determinado es válido
     if(index != 0){
       
-      //obtiene los datos del rango de validacion secundaria según el índice
+      //obtiene los datos del rango de validación secundaria según el índice
       var validationRange = validationDataSheet.getRange(2, index, validationDataSheet.getLastRow());
       
       //construye la regla de validación secundaria
       var validationRule = SpreadsheetApp.newDataValidation().requireValueInRange(validationRange).setAllowInvalid(allowInvalid).build();
       
-      //aplica la regla de validación en la celda correspondiente en la columna de validación secundaria
+      //aplica la regla de validación en la fila correspondiente de la columna de validación secundaria
       activeCell.offset(0, secondValidationColumnOffset).setDataValidation(validationRule);
   
      }  
