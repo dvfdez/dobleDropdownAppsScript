@@ -1,2 +1,2 @@
 # dobleDropdownAppsScript
-Double Dropdown Validation for Google Spreadsheet
+Double Dropdown Data Validation for Google Spreadsheet
