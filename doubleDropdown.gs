@@ -1,4 +1,4 @@
-/*Apps Script para doble validación - David Fernández
+/*Apps Script para doble validación - adapted by dvfdez
 
 1.Crear dos hojas
 
