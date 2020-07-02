@@ -1,4 +1,8 @@
-/*Apps Script para doble validación - adapted by dvfdez
+/*
+Apps Script para doble validación con menú desplegable - adapted by David Fernández
+
+@version  1.0 (2020.06)
+@see      https://github.com/dvfdez
 
 1.Crear dos hojas
 
